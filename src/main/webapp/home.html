@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>다온기술 업무포탈</title>
+<link rel="stylesheet" type="text/css" href="css/main.css?ver=1222112d11">
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<link rel="stylesheet" type="text/css" href="css/all.css">
+<script src="js/all.js"></script>
+<style>html,body{margin:10px;padding:0;height:100%;}</style>
+</head>
+<body>
+
+<div class = "gnb">
+	<div class = "logoArea">
+		<img class="logo" src = "image/daonlogo.png"  onclick="goMenu('HOME')">
+	</div>
+	<div class = "gnbList">
+		<span class="gnbBtn" onclick="goMenu('noticeboard',0)"> 
+		게시판
+			<span class="gnbDrop" style="display: none">
+				<span class="gnbDropMenu" onclick="goMenu('noticeboard',0)">최근게시물</span>
+				<span class="gnbDropMenu" onclick="goMenu('noticeboard',1)">공지사항</span>
+				<span class="gnbDropMenu" onclick="goMenu('noticeboard',2)">참고 자료</span>
+				<span class="gnbDropMenu" onclick="goMenu('noticeboard',3)">일정</span>
+			</span>
+		</span>
+		<span class="gnbBtn" onclick="goMenu('approval',0)"> 
+		전자결재
+			<span class="gnbDrop" style="display: none">
+				<span class="gnbDropMenu" onclick="goMenu('approval',0)">근태신청</span>
+				<span class="gnbDropMenu" onclick="goMenu('approval',1)">기타신청</span>			
+			</span>
+		</span>
+		
+		<span class="gnbBtn" onclick="goMenu('attendance',0)"> 
+			근태관리
+			<span class="gnbDrop" style="display: none">
+				<span class="gnbDropMenu" onclick="goMenu('attendance',0)">설계시수</span>
+				<span class="gnbDropMenu" onclick="goMenu('attendance',1)">연차 사용현황</span>
+			</span>
+		</span>
+	</div>		
+</div>
+
+
+<div class="nav1">
+	<div class="nav1-date"> 
+		<span id="todaydate">00:00:00 Mon</span>
+		<br>
+		<span id="todayclock">00:00:00</span>
+	</div>
+	<ul class="menu">
+		<li>
+			
+				<label for="btn" class="first">&nbsp;<i class="fa-solid fa-clipboard fa-lg"></i>&nbsp;&nbsp;&nbsp;게시판</label>
+			
+			<input type="checkbox" id="btn">
+			<ul>
+				<li><a href="#">최근 게시물</a></li>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">참고자료</a></li>
+				<li><a href="#">일정</a></li>
+			</ul>
+		</li>
+		<br>
+		<li>
+			
+				<label for="btn-2" class="second"><i class="fa-solid fa-rectangle-list fa-lg "></i>&nbsp;&nbsp;&nbsp;전자결재</label>
+			
+			<input type="checkbox" id="btn-2">
+			<ul>
+				<li><a href="#">근태신청</a></li>
+				<li><a href="#">근태관리</a></li>
+			</ul>
+		</li>
+		<br>
+		<li>
+			
+				<label for="btn-3" class="third"><i class="fa-solid fa-calendar-check fa-lg"></i>&nbsp;&nbsp;&nbsp;근태관리</label>
+			
+			<input type="checkbox" id="btn-3">
+			<ul>
+				<li><a href="#">설계시수</a></li>
+				<li><a href="#">연차 사용현황</a></li>
+			</ul>
+		</li>
+	</ul>
+
+</div>
+
+<div class="Content"> 
+	<div class="Content-left">
+		<div class="content-user">
+			<div class="usericon">
+				<div style="color: rgb(158, 195, 221);">
+					<i class="fa-solid fa-circle-user fa-3x"></i>
+					
+				</div>
+			</div>
+			
+			<label for="content-username" class="status-left">사용자</label>
+		</div>
+		<div class= "content-status">
+			<div></div>		
+			<div class="content-statusapp"> 
+				<span class="status-left">결재 진행사항:</span>
+				<span class="status-app"> 1건 </span>
+			</div>
+		
+			<div class="content-statusdayoff"> 	
+				<span class="status-left">잔여 연차개수:</span>
+				<span class="status-dayoff"> 10개 </span>
+			</div>
+		</div>
+		<div class="content-event"> 
+			<span class="calendar-title">일정 및 이벤트:</span>
+			
+			<div class="calendar">
+        		<div class="calendar-header">
+            		<span class="month-picker" id="month-picker">February</span>
+            		<div class="year-picker">
+                		<span class="year-change" id="prev-year">
+                    		<pre><</pre>
+                		</span>
+                		<span id="year">2021</span>
+                		<span class="year-change" id="next-year">
+                    		<pre>></pre>
+               			 </span>
+           			 </div>
+        		</div>
+        		<div class="calendar-body">
+            		<div class="calendar-week-day">
+                		<div>Sun</div>
+                		<div>Mon</div>
+                		<div>Tue</div>
+                		<div>Wed</div>
+                		<div>Thu</div>
+                		<div>Fri</div>
+                		<div>Sat</div>
+            		</div>
+            		<div class="calendar-days"></div>
+        		</div>     
+        		<div class="month-list"></div>
+    		</div>
+		</div>			
+	</div>
+	
+	<div class="Content-right">
+		<div class="content-board">
+	
+		</div>
+		<div class="content-approval">
+	
+		</div>
+	</div>
+</div>
+
+<div class="footer">	
+		<div class="footer-info">
+			
+		</div>
+		<div class="footer-subInfo">
+			
+		</div>
+		
+</div>
+
+
+
+<script type="text/javascript" src="js/ui.js?ver=1"></script>
+
+</body>
+</html>
