@@ -1,0 +1,43 @@
+.Container{
+    width:calc(82% - 60px);height:calc(-20px + 82%); float:left;
+	background:#dee3eb;	
+	display:flex;
+  margin:20px 60px 20px 0px;
+}
+
+.approvalLabel{
+    padding-left: 20px;
+    width: 250px;
+    height: 600px;
+    align-items: center;
+    
+    
+}
+.dropdownMenu{
+    padding-left: 20px;
+    align-items: center;
+    
+    
+}
+.Container2{
+    width: 700px;
+    height: 600px;
+    margin-top: 20px;
+}
+.tableContainer{
+
+}
+.fileContainer{
+    margin-top: 20px;
+    width: 50%;
+    height: 200px;
+    background-color: aliceblue;
+}
+.btnContainer{
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+h2{
+    color :rgb(89, 89, 243);
+}
