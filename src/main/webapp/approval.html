@@ -103,56 +103,60 @@
 			</select>
 		</div>
 	</div>
+	<div class="verticalLine"></div>
 	<div class="Container2">
-		<h3>근태신청서</h3>
-		<div class="tableContainer">
-			<table border="1" bordercolor="blue" width="500" height="150">
-				<th>신청인</th>
-				<th>근태구분</th>
-				<th>기간</th>
-				<th>사유</th>
-				<th>업무 인수자</th>
-				<tr>
-					<td>김태완</td>
-					<td>
+		
+		<div class="tablecontainer">
+			<h1>근태 신청서</h1>
+			  <table class="rwd-table">
+				<tbody>
+				  <tr>
+					<th>신청인</th>
+					<th>근태구분</th>
+					<th>기간</th>
+					<th>사유</th>
+					<th>업무 인수자</th>
+					<th>첨부파일</th>
+				  </tr>
+				  <tr>
+					<td data-th="Supplier Code">
+					  김태완
+					</td>
+					<td data-th="Supplier Name">
 						<select name="attendanceDivision" id="ad">
-							<option value="a">반월차</option>
-							<option value="b">월차</option>
-							<option value="c">조퇴</option>
-						</select>
+						<option value="a">반월차</option>
+						<option value="b">월차</option>
+						<option value="c">조퇴</option>
+					</select>
 					</td>
-					<td>
-						<i class="fa-regular fa-calendar"></i>
+					<td data-th="Invoice Number">
+						&nbsp;<i class="fa-regular fa-calendar"></i>
 					</td>
-					<td>
+					<td data-th="Invoice Date">
 						<select name="reason" id="reason">
 							<option value="a">가사</option>
 							<option value="b">훈련</option>
 							<option value="c">병가</option>
 						</select>
 					</td>
-					<td>
-						김태완
+					<td data-th="Due Date">
+					  김태완
 					</td>
-				</tr>
-
-			</table>
-		</div>
-		<div class="fileContainer">
-			<table border="1" bordercolor="blue" width="300" height="40">
-				<th width="100">첨부파일</th>
-				<th width="200">
-					<form action="#">
-						<input type="button" value="파일찾기">
-					</form>
-					
-				</th>
-				
-			</table>
-		</div>
+					<td data-th="Net Amount">
+						<button class="favoritestyled" type="button">
+					파일찾기
+				</button>
+					</td>
+				  </tr>
+				</tbody>
+			  </table>
+			  
+			</div>
+		
+		
 		<div class="btnContainer">
 			
-			<input type="button" value="결재신청">
+			<button class="favoritestyled2" type="button">제출하기
 		</div>
 	</div>
 	
@@ -176,3 +180,159 @@
 
 </body>
 </html>
+
+.Container{
+    width:calc(82% - 60px);height:calc(-20px + 82%); float:left;
+	background:#dee3eb;	
+	display:flex;
+  margin:20px 60px 20px 0px;
+}
+
+.approvalLabel{
+    margin-top: 20px;
+    margin-left: 30px;
+    padding-left: 20px;
+    width: 200px;
+    height: 600px;
+    align-items: center;
+    
+    
+}
+.dropdownMenu{
+    
+    align-items: center;
+    
+    
+}
+.verticalLine {
+    
+    border-left : thick solid #32a1ce;
+    height : 100%;
+  }
+.Container2{
+    margin-left: 20px;
+    width: 700px;
+    height: 600px;
+    margin-top: 100px;
+}
+.rwd-table {
+    margin: 0px;
+    min-width: 100px;
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .rwd-table tr:first-child {
+    border-top: none;
+    background: #428bca;
+    color: #fff;
+  }
+  
+  .rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #f5f9fc;
+  }
+  
+  .rwd-table tr:nth-child(odd):not(:first-child) {
+    background-color: #ebf3f9;
+  }
+  
+  .rwd-table th {
+    display: none;
+  }
+  
+  .rwd-table td {
+    display: block;
+  }
+  
+  .rwd-table td:first-child {
+    margin-top: .5em;
+  }
+  
+  .rwd-table td:last-child {
+    margin-bottom: .5em;
+  }
+  
+  .rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+    color: #000;
+  }
+  
+  .rwd-table th,
+  .rwd-table td {
+    text-align: left;
+  }
+  
+  .rwd-table {
+    color: #333;
+    border-radius: .4em;
+    overflow: hidden;
+  }
+  
+  .rwd-table tr {
+    border-color: #bfbfbf;
+  }
+  
+  .rwd-table th,
+  .rwd-table td {
+    padding: .5em 1em;
+  }
+  @media screen and (max-width: 601px) {
+    .rwd-table tr:nth-child(2) {
+      border-top: none;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .rwd-table tr:hover:not(:first-child) {
+      background-color: #d8e7f3;
+    }
+    .rwd-table td:before {
+      display: none;
+    }
+    .rwd-table th,
+    .rwd-table td {
+      display: table-cell;
+      padding: .25em .5em;
+    }
+    .rwd-table th:first-child,
+    .rwd-table td:first-child {
+      padding-left: 0;
+    }
+    .rwd-table th:last-child,
+    .rwd-table td:last-child {
+      padding-right: 0;
+    }
+    .rwd-table th,
+    .rwd-table td {
+      padding: 1em !important;
+    }
+  }
+.fileContainer{
+    margin-top: 100px;
+    margin-left: 85px;
+    width: 50%;
+    height: 200px;
+    
+}
+.btnContainer{
+    margin-top: 50px;
+    margin-right: 100px;
+}
+.favoritestyled2{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(70, 88, 253);
+}
+h2{
+    color :rgb(89, 89, 243);
+}
